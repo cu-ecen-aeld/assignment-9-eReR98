@@ -25,7 +25,7 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment4/* $(TARGET_DIR)/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/*.sh $(TARGET_DIR)/etc/finder-app/
 	$(INSTALL) -m 0755 $(@D)/finder-app/*.c $(TARGET_DIR)/etc/finder-app/
-	$(INSTALL) -m 0755 $(@D)/finder-app/Makefile $(TARGET_DIR)/etc/finder-app/
+	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/etc/finder-app/
 endef
 
 $(eval $(generic-package))
