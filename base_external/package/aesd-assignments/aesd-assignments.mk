@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = 'dbbd18a075481f90b4fcc6867cea6b484ad14703'
+AESD_ASSIGNMENTS_VERSION = 'c69ba2b921037471fe4c57ef5ab1b50b853e27cd'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -23,6 +23,9 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/etc/finder-app/conf/
 	$(INSTALL) -m 0755 $(@D)/conf/* $(TARGET_DIR)/etc/finder-app/conf/
 	$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment4/* $(TARGET_DIR)/bin
+	$(INSTALL) -m 0755 $(@D)/finder-app/*.sh $(TARGET_DIR)/etc/finder-app/
+	$(INSTALL) -m 0755 $(@D)/finder-app/*.c $(TARGET_DIR)/etc/finder-app/
+	$(INSTALL) -m 0755 $(@D)/finder-app/Makefile $(TARGET_DIR)/etc/finder-app/
 endef
 
 $(eval $(generic-package))
